@@ -39,13 +39,10 @@
         </div>
 
         <!-- Department -->
-        <label for="dept" class="form-label required">Department</label>
-        <select id="dept" name="dept" class="form-control" required>
-          {% for department in departments %}
-            <option value="{{ department.id }}">{{ department.name }}</option>
-          {% endfor %}
-        </select>
-        
+        <div style="margin-bottom: 15px;">
+          <label for="dept" class="form-label required">Department</label>
+          <input type="text" id="dept" name="dept" value="{{ dept }}" placeholder="HR, Engineering, Marketing" class="form-control" required>
+        </div>
 
         <!-- Role -->
         <div style="margin-bottom: 15px;">
@@ -53,11 +50,11 @@
           <input type="text" id="role" name="role" value="{{ role }}" placeholder="Manager, Developer, Designer" class="form-control" required>
         </div>
 
-        <!-- Phone Number -->
+        {% comment %} <!-- Phone Number -->
         <div style="margin-bottom: 15px;">
           <label for="phone" class="form-label required">Phone Number</label>
           <input type="tel" id="phone" name="phone" value="{{ phone }}" placeholder="123-456-7890" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        </div>
+        </div> {% endcomment %}
 
         <!-- Bonus -->
         <div style="margin-bottom: 15px;">
